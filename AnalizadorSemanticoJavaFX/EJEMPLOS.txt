@@ -1,0 +1,18 @@
+EJEMPLO CORRECTO
+
+int edad = 20;
+double promedio = 9.5;
+string nombre = "Eddi";
+edad = edad + 1;
+print(edad);
+print(nombre);
+
+EJEMPLO CON ERRORES
+
+int x = 10;
+int x = 20;
+y = x + 1;
+string nombre = "Eddi";
+x = nombre;
+int z = 10 / 0;
+print(z);

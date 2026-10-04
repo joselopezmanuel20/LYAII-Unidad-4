@@ -1,0 +1,39 @@
+@startuml
+title Diagrama de clases - Compilador / Analizador Semántico
+
+class MainApp
+class MiniCompiler
+class Lexer
+class Parser
+class SemanticAnalyzer
+class CodeGenerator
+class SymbolTable
+class Token
+class Symbol
+class SemanticError
+class CompilerResult
+class SemanticResult
+class Ast
+
+MainApp --> MiniCompiler : usa
+MiniCompiler --> Lexer : análisis léxico
+MiniCompiler --> Parser : análisis sintáctico
+MiniCompiler --> SemanticAnalyzer : análisis semántico
+MiniCompiler --> CodeGenerator : código objeto
+Lexer --> Token : produce
+Parser --> Ast : construye AST
+SemanticAnalyzer --> SymbolTable : consulta/actualiza
+SymbolTable --> Symbol : contiene
+SemanticAnalyzer --> SemanticError : genera
+MiniCompiler --> CompilerResult : retorna
+CompilerResult --> SemanticResult
+
+note right of SemanticAnalyzer
+Verifica:
+- variables duplicadas
+- variables no declaradas
+- compatibilidad de tipos
+- operaciones válidas
+- división literal entre cero
+end note
+@enduml

@@ -1,0 +1,9 @@
+package com.manuel.compiler;
+
+public enum TokenType {
+    INT, DOUBLE, STRING_TYPE, PRINT,
+    IDENTIFIER, NUMBER, STRING_LITERAL,
+    PLUS, MINUS, STAR, SLASH, ASSIGN,
+    LEFT_PAREN, RIGHT_PAREN, SEMICOLON,
+    EOF
+}
